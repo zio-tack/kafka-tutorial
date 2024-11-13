@@ -14,6 +14,7 @@ public class KafkaProducer {
     @Value("${spring.kafka.topic.name}")
     private String topicName;
 
+    // AUTOCONFIGURATO PERCHÉ STIAMO USANDO SPRINGBOOT: BASTA FARE DEPENDENCY INJECTION
     private KafkaTemplate<String, String> kafkaTemplate;
 
     public KafkaProducer(KafkaTemplate<String, String> kafkaTemplate) {
